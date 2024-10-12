@@ -12,3 +12,52 @@ var howday = greeting('howday');
 
 hello('Torikus');
 howday('Sadik');
+
+
+
+
+// another example 
+
+function counter(step = 1) {
+    var count = 0;
+    return function increaseCount(){
+        count = count + step;
+        return count;
+    };
+}
+
+var incBy1 = counter(1);
+var incBy3 = counter(3);
+
+console.log(incBy1());
+console.log(incBy1());
+
+console.log(incBy3());
+console.log(incBy3());
+console.log(incBy3());
+
+
+
+
+
+
+
+// another simple example 
+
+
+function outer() {
+
+    let msg = "hello!";
+    function inner() {
+        console.log(msg);
+    }
+
+    inner();
+}
+
+outer();
+
+
+
+
+
