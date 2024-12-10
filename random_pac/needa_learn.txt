@@ -1,0 +1,37 @@
+-> Arrow function
+-> Destructuring Assignment 
+-> Template literals 
+-> Default parameters
+-> Rest / spread Operator 
+-> Classes and class Syntax
+
+
+
+// functional programming concepts :
+
+-? pure functions 
+-? immutability
+-? higher-order functions 
+-? closures and scope 
+
+// asynchronous programming 
+
+-? promises 
+-? Async/ await 
+
+// Event handling & this binding 
+
+// Array methods : 
+
+-? map()
+-? filter()
+-? reduce()
+
+// context and state management 
+
+-? usestate
+-? useEffect 
+-? useContext
+-? useReduceer 
+
+// error handling and debugging 
