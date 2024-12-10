@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure and stuffs</title>
+</head>
+<body>
+    <h2 >Increment : <span id="increment1">0</span> </h2>
+    <button id="incrbtn1">Increment 1</button>
+    <br>
+    <h2>Increment : <span id="increment2">0</span> </h2>
+    <button id="incrbtn2">Increment 2</button>
+
+    <script>
+        // actual function 
+        function createCounter() {
+            let count = 0;
+
+            return function() {
+                count++;
+                return count;
+            };
+        }
+        let counter1 = createCounter();
+        let counter2 = createCounter();
+
+
+        // catch increment 1 and 2 
+        const incr1 = document.getElementById('increment1');
+        const incr2 = document.getElementById('increment2');
+
+        // catch buttons 
+
+        const btn_incr1 = document.getElementById('incrbtn1');
+        const btn_incr2 = document.getElementById('incrbtn2');
+
+        //  events 
+
+        btn_incr1.addEventListener('click', () => {
+            incr1.innerHTML = counter1();
+        });
+        btn_incr2.addEventListener('click', () => {
+            incr2.innerHTML = counter2();
+        })
+    </script>
+</body>
+</html>
